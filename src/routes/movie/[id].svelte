@@ -14,12 +14,18 @@
 </script>
 
 <script>
+import { mode } from "$app/env";
+
+
     export let movieDetail;
 </script>
 
 <div class="movie-details">
     <div class="img-container">
-        <img src={`https://image.tmdb.org/t/p/original${movieDetail.backgrop_path}`} alt={movieDetail.title}>
+        <img src={`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`} alt={movieDetail.title}>
+    </div>
+    <div class="text-container">
+        <h2>{movieDetail.title}</h2>
         <p class="overview">{movieDetail.overview}</p>
         <p>
             <span>Release Date: </span>{movieDetail.release_date} <br />
