@@ -1,15 +1,12 @@
 <script>
     import global from '../global.css';
+    import Nav from '../components/Nav.svelte';
 </script>
 
 <svelte:head>
     <title>Movie DB - SK</title>
 </svelte:head>
 
-<nav>
-    <ul>
-        <li>Hello</li>
-    </ul>
-</nav>
+<Nav />
 
 <slot />    
