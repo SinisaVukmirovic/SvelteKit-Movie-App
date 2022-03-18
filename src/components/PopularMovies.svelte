@@ -17,7 +17,7 @@
     }
     .popular-movies {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 2rem 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 1rem .5rem;
     }
 </style>
