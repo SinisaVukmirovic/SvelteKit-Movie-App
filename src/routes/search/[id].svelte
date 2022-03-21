@@ -4,12 +4,29 @@
         const res = await fetch(apiUrl);
         const data = await res.json();
 
-        console.log(data);
-
         if (res.ok) {
             return {
                 props: { searchedMovie: data.results }
             }
         }
     }
-</script> 
+</script>
+
+<script>
+    import MovieCard from "../../components/MovieCard.svelte";
+    export let searchedMovie;
+</script>
+
+<div class="searched-movies">
+    {#each  searchedMovie as movie}
+        <MovieCard {movie} />
+    {/each}
+</div>
+
+<style>
+    .searched-movies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 1rem .5rem;
+    }
+</style>
