@@ -1,5 +1,7 @@
 <script>
     import { goto } from '$app/navigation';
+    import { fly } from 'svelte/transition';
+
     let inputValue = '';
     let active = false;
     let cancelInactive = () => {
@@ -17,7 +19,10 @@
 
 <form class="search" on:submit|preventDefault={submitSearch}>
     {#if !active }
-        <label for="search_movie">Search Movie:</label>
+        <label for="search_movie"
+            in:fly={{ y: -10, duration: 500 }}
+            out:fly={{ y: -10, duration: 500 }}>Search Movie:
+        </label>
     {/if}
     <input bind:value={inputValue} 
         on:focus={() => active = true}
@@ -26,7 +31,8 @@
         class={active ? 'selected' : ''} />
 
     {#if inputValue}    
-        <button>Search</button>
+        <button in:fly={{ x: 20, duration: 500 }}
+                out:fly={{ x: 20, duration: 500 }}>Search</button>
     {/if}
 </form>
 
