@@ -3,7 +3,8 @@
 </script>
 
 <div class="movie-card">
-    <a href={`/movie/${movie.id}`}>
+    <!-- sveltekit no scrol prevents "jumps" in animation -->
+    <a href={`/movie/${movie.id}`} sveltekit:prefetch sveltekit:noscroll>
         <img src="{`https://image.tmdb.org/t/p/w300${movie.poster_path}`}" alt={movie.title}>
     </a>
     <div class="description">

@@ -1,10 +1,7 @@
 <script>
     import MovieCard from './MovieCard.svelte';
-    import SearchMovies from './SearchMovies.svelte';
     export let popular; 
 </script>
-
-<SearchMovies />
 
 <h2>Popular Movies</h2>
 

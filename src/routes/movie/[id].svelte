@@ -15,12 +15,12 @@
 
 <script>
 import { mode } from "$app/env";
-
+    import { fly } from 'svelte/transition';
 
     export let movieDetail;
 </script>
 
-<div class="movie-details">
+<div class="movie-details" in:fly={{x: 200, duration: 500, delay:500}}>
     <div class="img-container">
         <img src={`https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}`} alt={movieDetail.title}>
     </div>

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Movie DB - SK</title>
+    <title>Movie DB SvelteKit</title>
 </svelte:head>
 
 <Nav />
