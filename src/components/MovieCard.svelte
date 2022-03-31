@@ -35,5 +35,9 @@
         flex-direction: column;
         justify-content: space-around;
         padding: 1rem .5rem;
+        transition: transform 200ms linear;
     }
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
 </style>

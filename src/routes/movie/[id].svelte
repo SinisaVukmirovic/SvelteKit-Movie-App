@@ -46,6 +46,9 @@ import { mode } from "$app/env";
     .movie-details {
         margin: 2rem 20%;
     }
+    .text-container {
+        padding: .5rem 3rem;
+    }
     p {
         padding: 1rem 0;
     }
